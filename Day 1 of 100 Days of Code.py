@@ -100,6 +100,17 @@ length=len(name)
 print(length)
 
 
+# <h1 style="font-size:4;color:orange;">Band Name Generator!</h1>
+
+# In[33]:
+
+
+print("You want to form a band, but don't know how to name it?\nSay no more!")
+first_name=input("What is your name?\n")
+first_pet_name=input("What was your first pet's name?\n")
+print("Your band name could be "+first_name+" "+first_pet_name)
+
+
 # In[ ]:
 
 
