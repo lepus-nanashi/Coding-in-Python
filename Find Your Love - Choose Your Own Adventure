@@ -1,0 +1,36 @@
+print('''        _    .  ,   .           .
+    *  / \_ *  / \_      _  *        *   /\'__        *
+      /    \  /    \,   ((        .    _/  /  \  *'.
+ .   /\/\  /\/ :' __ \_  `          _^/  ^/    `--.
+    /    \/  \  _/  \-'\      *    /.' ^_   \_   .'\  *
+  /\  .-   `. \/     \ /==~=-=~=-=-;.  _/ \ -. `_/   \
+ /  `-.__ ^   / .-'.--\ =-=~_=-=~=^/  _ `--./ .-'  `-
+/=~=     `.  / /       `.~-^=-=~=^=.-'      '-._ `._''')
+print("Welcome to this adventure. Your adventure!")
+print("Your mission is to find your beloved.")
+print("There's the sea on your right and the woods on your left."+"\nWhich side will you go towards?")
+first_step=input("left or right? ")
+fork=first_step.lower()
+if fork=="left":
+    print("While this woods look lovely, they also look pretty dense.")
+    ("Are you waiting for night to fall or are you crossing the woods? ")
+    second_step=input("wait or cross? ")
+    light=second_step.lower()
+    if light == "wait":
+        print("The night fell and you are seeing the lights of three different houses.")
+        print("Which one will you go towards? ")
+        third_step=input("left, center, or right? ")
+        red=third_step.lower()
+        if red=="center":
+            print(''' (')) ^v^  _           (`)_
+(__)_) ,--j j-------, (__)_)
+      /_.-.___.-.__/ \
+    ,8| [_],-.[_] | oOo
+,,,oO8|_o8_|_|_8o_|&888o,,,hjw''')
+            print("\nCongratulations! Your love was waiting for you to come home and you're finally here!")
+        else:
+            print("Someone answered, but it was a stranger and couldn't help you find your love."+"\nGame Over.")
+    else:
+        print("You got lost in the woods and couldn't find a way out"+"\nGame Over.")
+else:
+    print("You didn't see the cliff and fell right off."+"\nGame Over.")
