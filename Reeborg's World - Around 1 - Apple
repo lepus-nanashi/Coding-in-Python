@@ -1,0 +1,19 @@
+def walk():
+    while wall_on_right() and not wall_in_front():
+        if object_here():
+            take()  
+        else:
+            move()
+def turn():
+    while wall_on_right() and wall_in_front():
+        turn_left()
+        if object_here():
+            take()
+        if at_goal():
+            done()
+        else:
+            move()     
+move()
+while not at_goal():
+    walk()
+    turn()
