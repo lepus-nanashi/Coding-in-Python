@@ -1,0 +1,16 @@
+def walk():
+    while wall_on_right() and not wall_in_front():
+        if object_here():
+            take()
+            done()
+        else:
+            move()
+def turn():
+    while wall_on_right() and wall_in_front():
+        turn_left()
+        move()
+put("token")
+move()
+while True:
+    walk()
+    turn()
