@@ -27,21 +27,30 @@ scissors = '''
 ---.__(___)  
 '''  
 game_images=[rock, paper, scissors]
-user_choice=int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors.\n"))
-print(game_images[user_choice])
-comp_choice=random.randint(0,2)
-print(game_images[comp_choice])
-
-if user_choice >=3 or user_choice < 0:
-    print("You typed an invalid number. You lose.")
-elif user_choice == 0 and comp_choice == 2:
-    print("You win!")
-elif comp_choice == 0 and user_choice ==2:
-    print("You lose...")
-elif comp_choice > user_choice:
-    print("You lose...")
-elif user_choice>comp_choice:
-    print("You win!")
-elif comp_choice == user_choice:
-    print("It's a draw!")
-
+choice=input("What shall you choose? Rock, Paper, or Scissors? ")
+user_choice=choice.lower()
+print(user_choice)
+options=["rock","paper","scissors"]
+comp_choice=random.choice(options)
+print(comp_choice)
+if comp_choice == "rock":
+    if user_choice =="paper":
+        print(f"Your choice: {paper}\nComputer's choice: {rock}\nYou win!")
+    elif user_choice == "scissors":
+        print(f"Your choice: {scissors}\nComputer's choice: {rock}\nYou lose...")
+    elif user_choice == "rock":
+        print(f"Your choice: {rock}\nComputer's choice:{rock}\nWhat are the chances, it's a draw!")
+if comp_choice=="paper":
+    if user_choice=="scissors":
+        print(f"Your choice: {scissors}\nComputer's choice: {paper}\nYou win!")
+    elif user_choice=="rock":
+        print(f"Your choice: {rock}\nComputer's choice: {paper}\nYou lose...")
+    elif user_choice=="paper":
+        print(f"Your choice: {rock}\nComputer's choice:{rock}\nWhat are the chances, it's a draw!")
+if comp_choice=="scissors":
+    if user_choice=="rock":
+        print(f"Your choice: {rock}\nComputer's choice: {scissors}\nYou win!")
+    elif user_choice=="paper":
+        print(f"Your choice: {paper}\nComputer's choice: {scissors}\nYou lose...")
+    elif user_choice=="scissors":
+        print(f"Your choice: {scissors}\nComputer's choice:{scissors}\nWhat are the chances, it's a draw!")
